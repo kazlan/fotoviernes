@@ -1,7 +1,7 @@
 doctype html
-html(lang="es")
+html(lang="es" ng-app="viernesApp")
 	head
-		title Ionic App template
+		title La foto del viernes
 		meta(charset="utf8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		// build:css css/libs.min.css 
@@ -9,10 +9,24 @@ html(lang="es")
 		// endbower
 		//endbuild
 
-	body
+	body(ng-controller="mainController")
+		md-content
+			md-toolbar
+				.md-toolbar-tools
+					md-button.md-icon-button(aria-label="menu")
+						ng-md-icon(icon="menu")
+					h2
+						span Foto del viernes
+					span(flex)
+					md-button.md-icon-button(aria-label="options")
+						ng-md-icon(icon="more_vert")
 		
 		//- IMPORTA LIBRERIAS
 		// build:js js/libs.min.js
 		// bower:js
 		// endbower
 		// endbuild
+		//###############
+		//- COMPONENTES
+		script(src="app.js")
+		script(src="mainController.js")

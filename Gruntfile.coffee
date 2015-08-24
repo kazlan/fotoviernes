@@ -24,6 +24,7 @@ module.exports = (grunt) ->
             options:
                 server:
                     baseDir: "app/"
+                    routes: '/bower_components': 'bower_components'
                 ui:
                     port: 8080
                 open: false
